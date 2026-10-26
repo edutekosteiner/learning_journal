@@ -8,9 +8,19 @@ dotenvconfig();
 /* TODO: change to read configuration from environment */
 const blogEnabled = Boolean(process.env.BLOG_ENABLED === 'true')
 
+
+
+
+
+const gitRepositoryUrl: string = process.env.GIT_REPOSITORY_URL || 'https://github.com/edutekosteiner/fallback';
+console.log("Adresse zum Git-Repository:", gitRepositoryUrl);
+
+
+
+
 const config: Config = {
-  title: 'DSO Live Demo Docs',
-  tagline: 'Dinosaurs are cool',
+  title: 'Learning Journal',
+  tagline: 'Contains the additional information and instructions required by the school',
   favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
@@ -50,7 +60,8 @@ const config: Config = {
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/spmse/dev-blog-template',
+            /*'https://github.com/spmse/dev-blog-template',*/
+            gitRepositoryUrl
         },
         blog: blogEnabled ? 
           {
@@ -62,7 +73,8 @@ const config: Config = {
             // Please change this to your repo.
             // Remove this to remove the "edit this page" links.
             editUrl:
-              'https://github.com/spmse/dev-blog-template',
+              /*'https://github.com/spmse/dev-blog-template',*/
+            gitRepositoryUrl,
             // Useful options to enforce blogging best practices
             onInlineTags: 'warn',
             onInlineAuthors: 'warn',
@@ -80,7 +92,8 @@ const config: Config = {
     // Replace with your project's social card
     image: 'img/docusaurus-social-card.jpg',
     navbar: {
-      title: 'My Site',
+      /*title: 'Learning',*/
+      title: 'You never stop learning',
       logo: {
         alt: 'My Site Logo',
         src: 'img/logo.svg',
@@ -93,7 +106,8 @@ const config: Config = {
           label: 'Docs',
         },
         {
-          href: 'https://github.com/spmse/dev-blog-template',
+          /*href: 'https://github.com/spmse/dev-blog-template',*/
+          href: gitRepositoryUrl,
           label: 'Github',
           position: 'right',
         },
@@ -109,9 +123,13 @@ const config: Config = {
               label: 'Tutorial',
               to: '/docs/guides/intro',
             },
+            {
+              label: 'Project',
+              to: '/docs/projects/overview',
+            },
           ],
         },
-        {
+        /*{
           title: 'Community',
           items: [
             {
@@ -127,18 +145,23 @@ const config: Config = {
               href: 'https://twitter.com/docusaurus',
             },
           ],
-        },
+        },*/
         {
           title: 'More',
           items: [
             {
               label: 'GitHub',
-              href: 'https://github.com/facebook/docusaurus',
+              /*href: 'https://github.com/facebook/docusaurus',*/
+              href: gitRepositoryUrl,
+            },
+            {
+              label: 'Template',
+              href: 'https://github.com/Developer-Akademie-DevSecOpsKurs/dev-blog-template',
             }
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} Sven Patrick Meier (spmse). Built with Docusaurus and 💚.`,
+      copyright: `Copyright © ${new Date().getFullYear()} Marco Steiner. Built with Docusaurus and 💚.` + ` Extended from the developer-akademie-starter.`,
     },
     prism: {
       theme: prismThemes.github,

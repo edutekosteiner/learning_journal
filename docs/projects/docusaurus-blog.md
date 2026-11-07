@@ -33,3 +33,4 @@ npm run build
 *.env
 npm run serve
 ```
+8. Generate the video for the project submission.

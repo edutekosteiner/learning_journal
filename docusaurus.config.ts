@@ -19,7 +19,7 @@ console.log("Adresse zum Git-Repository:", gitRepositoryUrl);
 
 
 const config: Config = {
-  title: 'Learning Journal',
+  title: 'Learning Journal from Marco Steiner',
   tagline: 'Contains the additional information and instructions required by the school',
   favicon: 'img/favicon.ico',
 

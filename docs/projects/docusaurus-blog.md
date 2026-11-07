@@ -24,4 +24,12 @@ This is where I'm working on my Dokusaurus project, which will also be my first 
    $ npm start
    ```
 5. Work through individual tasks from the checklist and use tests to ensure that the desired requirements have been implemented.
-
+6. Test the application.
+```
+npm run build
+```
+7. Build the application.
+```
+*.env
+npm run serve
+```

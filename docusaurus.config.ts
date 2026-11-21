@@ -9,18 +9,13 @@ dotenvconfig();
 const blogEnabled = Boolean(process.env.BLOG_ENABLED === 'true')
 
 
-
-
-
 const gitRepositoryUrl: string = process.env.GIT_REPOSITORY_URL || 'https://github.com/edutekosteiner/fallback';
 console.log("Adresse zum Git-Repository:", gitRepositoryUrl);
 
 
-
-
 const config: Config = {
   title: 'Learning Journal from Marco Steiner',
-  tagline: 'Conpmntains the additional information and instructions required by the school',
+  tagline: 'Includes the additional information and instructions required by the school',
   favicon: 'img/favicon.ico',
 
   // Set the production url of your site here

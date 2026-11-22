@@ -7,11 +7,8 @@ dotenvconfig();
 
 /* TODO: change to read configuration from environment */
 const blogEnabled = Boolean(process.env.BLOG_ENABLED === 'true')
-
-
 const gitRepositoryUrl: string = process.env.GIT_REPOSITORY_URL || 'https://github.com/edutekosteiner/fallback';
 console.log("Adresse zum Git-Repository:", gitRepositoryUrl);
-
 
 const config: Config = {
   title: 'Learning Journal from Marco Steiner',
@@ -55,7 +52,6 @@ const config: Config = {
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            /*'https://github.com/spmse/dev-blog-template',*/
             gitRepositoryUrl
         },
         blog: blogEnabled ? 
@@ -68,7 +64,6 @@ const config: Config = {
             // Please change this to your repo.
             // Remove this to remove the "edit this page" links.
             editUrl:
-              /*'https://github.com/spmse/dev-blog-template',*/
             gitRepositoryUrl,
             // Useful options to enforce blogging best practices
             onInlineTags: 'warn',
@@ -87,7 +82,6 @@ const config: Config = {
     // Replace with your project's social card
     image: 'img/docusaurus-social-card.jpg',
     navbar: {
-      /*title: 'Learning',*/
       title: 'Learning Journal from Marco Steiner',
       logo: {
         alt: 'My Site Logo',
@@ -101,7 +95,6 @@ const config: Config = {
           label: 'Docs',
         },
         {
-          /*href: 'https://github.com/spmse/dev-blog-template',*/
           href: gitRepositoryUrl,
           label: 'Github',
           position: 'right',
@@ -124,29 +117,11 @@ const config: Config = {
             },
           ],
         },
-        /*{
-          title: 'Community',
-          items: [
-            {
-              label: 'Stack Overflow',
-              href: 'https://stackoverflow.com/questions/tagged/docusaurus',
-            },
-            {
-              label: 'Discord',
-              href: 'https://discordapp.com/invite/docusaurus',
-            },
-            {
-              label: 'Twitter',
-              href: 'https://twitter.com/docusaurus',
-            },
-          ],
-        },*/
         {
           title: 'More',
           items: [
             {
               label: 'GitHub',
-              /*href: 'https://github.com/facebook/docusaurus',*/
               href: gitRepositoryUrl,
             },
             {

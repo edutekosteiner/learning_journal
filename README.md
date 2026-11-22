@@ -48,7 +48,7 @@ This repository hosts a developer blog built with Docusaurus. It includes tools 
 
 4. Deployment
 
-   Das automatische Deployment nach GitHub Pages wird durch einen Commit auf den Main Branch dieses Repositorys angestossen.
+   Automatic deployment to GitHub Pages is triggered by a commit to the main branch of this repository.
 
 ## Repository Structure
 
